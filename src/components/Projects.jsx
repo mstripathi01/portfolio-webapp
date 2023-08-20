@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import ecommerceApplication from '../assets/portfolio/blog-application.jpeg';
-import covidWorld from '../assets/portfolio/covid-worldometer.jpeg';
-import restaurant from '../assets/portfolio/Restaurant.png';
-import etherpay from '../assets/portfolio/etherpay.png';
+import ecommerceApplication from '../assets/portfolio/ecommerce.png';
+import tesla from '../assets/portfolio/tesla.png';
+import pokemon from '../assets/portfolio/pokemon.png';
 import demo from '../assets/portfolio/demo.png';
 
 
@@ -17,41 +16,22 @@ const Projects = () => {
     },
     {
       id: 2,
-      src: covidWorld,
-      demoUrl: 'https://youtu.be/bDCLbfkdy0s',
-      codeUrl: 'https://github.com/trishitaNandy/CovidWorldometer/tree/main/site'
+      src: tesla,
+      codeUrl: 'https://github.com/tripathimayank/teslaclone-app'
     },
     {
         id: 3,
-        src: restaurant,
-        demoUrl: 'https://trishitanandy.github.io/Restaurent-Website/Restaurant-site/',
-        codeUrl: 'https://github.com/trishitaNandy/Restaurent-Website'
+        src: pokemon,
+        codeUrl: 'https://github.com/tripathimayank/Pokemon-App'
     },
     {
-        id: 4,
-        src: etherpay,
-        demoUrl: 'https://ether-pay.netlify.app/',
-        codeUrl: 'https://github.com/trishitaNandy/EtherPay-Blockchain'
-    },
-    {
-        id: 5,
-        src: demo,
-        demoUrl: 'https://example.com/demo2',
-        codeUrl: 'https://example.com/demo2'
-    },
-    {
-        id: 6,
-        src: demo,
-        demoUrl: 'https://example.com/demo2',
-        codeUrl: 'https://example.com/demo2'
-    },
-    // Add demoUrl and codeUrl for other projects
+      id: 4,
+      src: demo,
+      codeUrl: 'https://github.com/tripathimayank/portfolio-main'
+  },
   ];
 
-  const handleButtonClick = (demoUrl, codeUrl) => {
-    if (demoUrl) {
-      window.open(demoUrl, '_blank');
-    }
+  const handleButtonClick = (codeUrl) => {
     if (codeUrl) {
       window.open(codeUrl, '_blank');
     }
@@ -71,15 +51,9 @@ const Projects = () => {
               <div className='flex items-center justify-center'>
                 <button
                   className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'
-                  onClick={() => handleButtonClick(project.demoUrl, project.codeUrl)}
-                >
-                  Demo
-                </button>
-                <button
-                  className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'
                   onClick={() => handleButtonClick(project.codeUrl)}
                 >
-                  Code
+                  Check it out
                 </button>
               </div>
             </div>
