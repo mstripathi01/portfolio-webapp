@@ -23,7 +23,7 @@ const SocialLinks = () => {
           <FaGithub size={30} />
         </>
       ),
-      href: "https://github.com/tripathimayank",
+      href: "https://github.com/mstripathi01",
     },
     {
       id: 3,
@@ -43,7 +43,7 @@ const SocialLinks = () => {
           <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: "https://drive.google.com/file/d/1xigSBXG4DxC8WfZTG6U7-S4qJVzTiIjd/view?usp=drive_link_blank",
+      href: "https://drive.google.com/file/d/1xbYPhD9cYXP6WZ8PWycxSEY41d-9K3jH/view?usp=drive_link",
     },
   ];
 

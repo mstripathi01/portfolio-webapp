@@ -3,6 +3,7 @@ import ecommerceApplication from '../assets/portfolio/ecommerce.png';
 import tesla from '../assets/portfolio/tesla.png';
 import pokemon from '../assets/portfolio/pokemon.png';
 import demo from '../assets/portfolio/demo.png';
+import gym from "../assets/portfolio/gym.png"
 
 
 const Projects = () => {
@@ -29,6 +30,11 @@ const Projects = () => {
       src: demo,
       codeUrl: 'https://github.com/tripathimayank/portfolio-main'
   },
+  {
+    id: 5,
+    src: gym,
+    codeUrl: 'https://github.com/tripathimayank/gymwebsite'
+},
   ];
 
   const handleButtonClick = (codeUrl) => {
