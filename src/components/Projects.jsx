@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import ecommerce from "../assets/portfolio/ecommerce.png";
 import tesla from "../assets/portfolio/tesla.png";
 import pokemon from "../assets/portfolio/pokemon.png";
 import demo from "../assets/portfolio/demo.png";
 import gym from "../assets/portfolio/gym.png";
+import ecommerce from "../assets/portfolio/ecommerce.png";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
