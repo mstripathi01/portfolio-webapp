@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ecommerceApplication from "../assets/portfolio/ecommerce.png";
+import ecommerce from "../assets/portfolio/ecommerce.png";
 import tesla from "../assets/portfolio/tesla.png";
 import pokemon from "../assets/portfolio/pokemon.png";
 import demo from "../assets/portfolio/demo.png";
@@ -11,7 +11,7 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      src: ecommerceApplication,
+      src: ecommerce,
       codeUrl: "https://github.com/mstripathi01/ecommerce-web-app",
     },
     {
