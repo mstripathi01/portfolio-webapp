@@ -4,6 +4,7 @@ import pokemon from "../assets/portfolio/pokemon.png";
 import demo from "../assets/portfolio/demo.png";
 import gym from "../assets/portfolio/gym.png";
 import ecommercewebapp from "../assets/portfolio/ecommercewebapp.png";
+import netflixgpt from "../assets/portfolio/netflixgpt.png";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -12,31 +13,45 @@ const Projects = () => {
     {
       id: 1,
       src: ecommercewebapp,
+      demoUrl: "https://ecommerce-web-app-smoky.vercel.app/",
       codeUrl: "https://github.com/mstripathi01/ecommerce-web-app",
     },
     {
       id: 2,
       src: tesla,
+      demoUrl: "https://teslaclone-web-app.vercel.app/",
       codeUrl: "https://github.com/mstripathi01/teslaclone-app",
     },
     {
       id: 3,
       src: pokemon,
+      demoUrl: "https://pokemon-api-286ca.web.app/",
       codeUrl: "https://github.com/mstripathi01/Pokemon-App",
     },
     {
       id: 4,
       src: demo,
-      codeUrl: "https://github.com/mstripathi01/portfolio-main",
+      demoUrl: "https://portfolio-webapp-three.vercel.app/",
+      codeUrl: "https://github.com/mstripathi01/portfolio-webapp",
     },
     {
       id: 5,
       src: gym,
+      demoUrl: "https://thefitclubgym.pages.dev/",
       codeUrl: "https://github.com/mstripathi01/gymwebsite",
+    },
+    {
+      id: 6,
+      src: netflixgpt,
+      demoUrl: "https://netflixgpt-72d40.web.app/",
+      codeUrl: "https://github.com/mstripathi01/netflix-gpt",
     },
   ];
 
-  const handleButtonClick = (codeUrl) => {
+  const handleButtonClick = (demoUrl, codeUrl) => {
+    if (demoUrl) {
+      window.open(demoUrl, "_blank");
+    }
     if (codeUrl) {
       window.open(codeUrl, "_blank");
     }
@@ -68,9 +83,17 @@ const Projects = () => {
               <div className="flex items-center justify-center">
                 <button
                   className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
+                  onClick={() =>
+                    handleButtonClick(project.demoUrl, project.codeUrl)
+                  }
+                >
+                  Demo
+                </button>
+                <button
+                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
                   onClick={() => handleButtonClick(project.codeUrl)}
                 >
-                  Check it out
+                  Code
                 </button>
               </div>
             </div>
