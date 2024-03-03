@@ -48,49 +48,44 @@ const Projects = () => {
     },
   ];
 
-  const handleButtonClick = (demoUrl, codeUrl) => {
-    if (demoUrl) {
-      window.open(demoUrl, "_blank");
-    }
-    if (codeUrl) {
-      window.open(codeUrl, "_blank");
+  const handleButtonClick = (url) => {
+    if (url) {
+      window.open(url, "_blank");
     }
   };
 
   return (
     <div
       name="projects"
-      className="bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen"
+      className="bg-gradient-to-b from-black to-gray-800 w-full text-white min-h-screen"
     >
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             Projects
           </p>
           <p className="py-6">Check out some of my work right here</p>
         </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 px-4">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="shadow-md shadow-gray-600 rounded-lg"
+              className="shadow-md rounded-lg overflow-hidden"
             >
               <img
                 src={project.src}
                 alt=""
-                className="rounded-md duration-200 hover:scale-105"
+                className="w-full rounded-t-md hover:opacity-80 transition duration-300"
               />
-              <div className="flex items-center justify-center">
+              <div className="p-4">
                 <button
-                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
-                  onClick={() =>
-                    handleButtonClick(project.demoUrl, project.codeUrl)
-                  }
+                  className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-2 rounded-md my-2 hover:opacity-80 transition duration-300"
+                  onClick={() => handleButtonClick(project.demoUrl)}
                 >
                   Demo
                 </button>
                 <button
-                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
+                  className="w-full bg-gray-700 text-white py-2 rounded-md my-2 hover:opacity-80 transition duration-300"
                   onClick={() => handleButtonClick(project.codeUrl)}
                 >
                   Code

@@ -22,7 +22,7 @@ const About = () => {
             About
           </p>
         </div>
-        <p className="text-2xl font-semibold mt-10">
+        <p className="text-2xl font-semibold mt-1">
           I'm Mayank Shekhar Tripathi
         </p>
         <br />
